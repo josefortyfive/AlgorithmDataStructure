@@ -16,6 +16,7 @@ In this repository it uses the following
 
 ## Data Structure 
 * Array
+* LinkedList
 
 
 ---- More will be added in the future ----
