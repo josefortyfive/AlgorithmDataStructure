@@ -15,9 +15,9 @@ public class SinglyLinkedList<E> {
 		public void setNext(Node<E> n) { next = n; }
 	}
 	
-	private Node<E> head = null;
-	private Node<E> tail = null;
-	private int size = 0;
+	private Node<E> head = null; // head node of the list (or null if empty)
+	private Node<E> tail = null; // last Node of the list (or null if empty)
+	private int size = 0; 		// constructs an initially empty list
 	
 	
 	public SinglyLinkedList() {
