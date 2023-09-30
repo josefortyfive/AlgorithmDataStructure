@@ -3,7 +3,7 @@ package smallSideProj;
 public class MakeCoffee {
 
 	public static void main(String args[]) {
-		Coff makeCof = Coff.Chocolate;
+		Coff makeCof = Coff.Coffee;
 		
 		switch(makeCof) {
 		case Coffee: printArray(new String[]{
