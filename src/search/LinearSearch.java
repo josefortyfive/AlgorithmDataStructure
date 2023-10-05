@@ -24,6 +24,7 @@ public class LinearSearch {
 		}
 		else {
 			System.out.println("The number in is in index: "+result);
+			
 		}
 		
 	}
