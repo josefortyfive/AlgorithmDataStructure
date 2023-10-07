@@ -1,4 +1,5 @@
 package search;
+
 import java.io.*;
 
 class BinarySearch {
