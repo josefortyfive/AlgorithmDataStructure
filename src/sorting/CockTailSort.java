@@ -43,5 +43,20 @@ public class CockTailSort {
 	
 	
 	
+	public static void printArray(int arr[]) {
+		int n = arr.length;
+		
+		for(int i = 0; i < n; i++) {
+			System.out.print(arr[i]+" ");
+		}
+	}
+	public static void main(String args[]) {
+		
+		int arr[] = {4, 11, 2, 5, 10, 12};
+		cockTailSort(arr);
+		printArray(arr);
+	
+	}
+	
 	
 }
