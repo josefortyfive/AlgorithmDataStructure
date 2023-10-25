@@ -40,7 +40,18 @@ public class PigeonHole {
 		}
 	}
 	
-	public static void main(String args[]) {
+	
+	public static void printArray(int arr[]) {
+		int n = arr.length;
 		
+		for(int i = 0; i < n; i++) {
+			System.out.print( arr[i]+" ");
+		}
+	}
+	public static void main(String args[]) {
+		int arr[] = {24, 55, 1, 12, 11};
+		
+		pegeonhole_sort(arr);
+		printArray(arr);
 	}
 }
