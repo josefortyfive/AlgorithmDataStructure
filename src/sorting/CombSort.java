@@ -17,7 +17,7 @@ public class CombSort {
 		int n = arr.length; // get the length of the array to loop 
 		
 		
-		int gap = n; // intialize gap
+		int gap = n; // initialize gap
 		
 		
 		boolean swapped = true; // swaps the value if it's true
@@ -32,8 +32,6 @@ public class CombSort {
 			swapped = false; // Swapped if false to check if it happend or not
 			
 			for(int i = 0; i < n - gap; i++) {
-				
-				
 				if(arr[i]> arr[i + gap]) {
 					int temp = arr[i];
 					arr[i] = arr[i + gap];

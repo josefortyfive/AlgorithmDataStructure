@@ -1,4 +1,4 @@
-package recusion;
+package recursion;
 
 public class Recusion1 {
 	
