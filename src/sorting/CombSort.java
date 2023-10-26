@@ -32,9 +32,14 @@ public class CombSort {
 			swapped = false; // Swapped if false to check if it happend or not
 			
 			for(int i = 0; i < n - gap; i++) {
-				int temp = arr[i];
-				arr[i] = arr[i + gap];
-				arr[i + gap] = temp;
+				
+				
+				if(arr[i]> arr[i + gap]) {
+					int temp = arr[i];
+					arr[i] = arr[i + gap];
+					arr[i + gap] = temp;
+				}
+
 			}	
 		}	
 	}
@@ -50,5 +55,9 @@ public class CombSort {
 	
 	public static void main(String args[]) {
 		
+		int arr[] = {14, 1, 11, 9, 20, 30, 15};
+		
+		combSort(arr);
+		printArray(arr);
 	}
 }
