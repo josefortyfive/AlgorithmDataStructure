@@ -1,12 +1,14 @@
 package sorting;
 
+import java.util.Arrays;
+
 public class GnomeSort {
 	
 	public static void gnomeSort(int arr[], int n) {
 		int index = 0;
 		
 		while(index < n) {
-			if(index < n) {
+			if(index == 0) {
 				index++;
 			}
 			
@@ -33,6 +35,16 @@ public class GnomeSort {
 		for(int i = 0; i < n; i++) {
 			System.out.print(arr[i]+ " ");
 		}
+	}
+	
+	public static void main(String args[]) {
+		int arr[] = { 24, 111, 1, 13 };
+		
+		gnomeSort(arr, arr.length);
+		
+		System.out.print("Sorted sequence after using Gnome Sort: ");
+		
+		printArray(arr);
 	}
 	
 	
