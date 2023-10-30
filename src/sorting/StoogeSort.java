@@ -37,4 +37,16 @@ public class StoogeSort {
 			System.out.print(arr[i]+ " " );
 		}
 	}
+	
+	public static void main(String args[]) {
+		int arr[] = { 1224, 11, 100, 1, 25 };
+		
+		int n = arr.length;
+		
+		stoogeSort(arr, 0, n - 1);
+		
+		for(int i = 0; i < n; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
 }
