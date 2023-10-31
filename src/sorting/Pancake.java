@@ -57,4 +57,25 @@ public class Pancake {
         }
         return 0;
     }
+    
+
+    /* Utility function to print array arr[] */
+    static void printArray(int arr[], int arr_size)
+    {
+        for (int i = 0; i < arr_size; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println("");
+    }
+ 
+    /* Driver function to check for above functions*/
+    public static void main (String[] args)
+    {
+        int arr[] = {23, 10, 20, 11, 12, 6, 7};
+        int n = arr.length;
+         
+        pancakeSort(arr, n);
+         
+        System.out.println("Sorted Array: ");
+        printArray(arr, n);
+    }
 }
