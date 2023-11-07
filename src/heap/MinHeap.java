@@ -27,4 +27,13 @@ public class MinHeap {
 		return (key - 1 ) / 2;
 		
 	}
+	
+	
+	private int left(int key) {
+		return 2 * key + 1;
+	}
+	
+	private int right(int key) {
+		return 2 * key + 2;
+	}
 }
