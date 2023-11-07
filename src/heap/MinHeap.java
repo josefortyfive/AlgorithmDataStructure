@@ -15,5 +15,16 @@ public class MinHeap {
 		heapArray = new int[capacity];
 		current_heap_size = 0;
 	}
+	
+	private void swap(int arr[], int a, int b) {
+		int temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+		
+	}
 
+	private int parent(int key) {
+		return (key - 1 ) / 2;
+		
+	}
 }
