@@ -103,4 +103,54 @@ public class MinHeap {
 	
 	// This function deletes key at the given index. It first reduced value
 	// to minus infinite, then calls extractMin()
+	
+	public void deleteKey(int key) {
+		decreaseKey(key, Integer.MIN_VALUE);
+		extractMin();
+	}
+	// A recursive method to heapify a subtree
+	
+	private void MinHeapify(int key) {
+		int l = left(key);
+		int r = right(key);
+		
+		int smallest = key;
+		
+		if( l < current_heap_size && heapArray[l] < heapArray[smallest]) {
+			smallest = l;
+		}
+		
+		if( r < current_heap_size && heapArray[r] < heapArray[smallest]) {
+			smallest = r;
+		}
+		
+		if(smallest != key) {
+			swap(heapArray, key, smallest);
+			MinHeapify(smallest);
+		}
+	}
+	
+	// Increases the value of given key to new_val.
+	// It is assumed that new_val is greater
+	// than heapArray[key].
+	// Heapify from the given key
+	
+	public void increaseKey(int key, int new_val) {
+		heapArray[key] = new_val;
+		MinHeapify(key);
+	}
+	
+	// Changes value on a key
+	
+	public void changeValueOnAKey(int key, int new_val) {
+		if(heapArray[key] == new_val) {
+			return;
+		}
+		
+		if(heapArray[key] < new_val) {
+			increaseKey(key, new_val);
+		} else {
+			decreaseKey(key, new_val);
+		}
+	}
 }
