@@ -36,4 +36,28 @@ public class MinHeap {
 	private int right(int key) {
 		return 2 * key + 2;
 	}
+	
+	
+	public boolean insertKey(int key) {
+		
+		if(current_heap_size == capacity) {
+			
+			// if heap is full return false
+			
+			return false;
+		}
+		
+		// First insert the new key at the end
+		
+		int i = current_heap_size;
+		heapArray[i] = key;
+		current_heap_size++;
+		
+		while(i != 0 && heapArray[i] < heapArray[parent(i)]) {
+			swap(heapArray, i, parent(i));
+			i = parent(i);
+		}
+		
+		return true;
+	}
 }
