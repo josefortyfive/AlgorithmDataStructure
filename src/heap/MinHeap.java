@@ -60,4 +60,47 @@ public class MinHeap {
 		
 		return true;
 	}
+	
+	// Decrease value of given key to new_val
+	// It is assumed that new_val is smaller than heapArray[key].
+	
+	public void decreaseKey(int key, int new_val) {
+		heapArray[key] = new_val;
+		
+		while(key != 0 && heapArray[key] < heapArray[parent(key)]) {
+			swap(heapArray, key, parent(key));
+			key = parent(key);
+		}
+	}
+	
+	
+	public int getMin() {
+		return heapArray[0];
+	}
+	
+	
+	public int extractMin() {
+		if(current_heap_size <= 0) {
+			return Integer.MAX_VALUE;
+		}
+		
+		if(current_heap_size == 1) {
+			current_heap_size--;
+			
+			return heapArray[0];
+		}
+		
+		int root = heapArray[0];
+		
+		
+		heapArray[0] = heapArray[current_heap_size - 1];
+		current_heap_size--;
+		MaxHeapify(0);
+		
+		return root;
+	}
+	
+	
+	// This function deletes key at the given index. It first reduced value
+	// to minus infinite, then calls extractMin()
 }
