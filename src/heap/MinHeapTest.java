@@ -1,6 +1,6 @@
 package heap;
 
-public class MinHeap {
+class MinHeap{
 	
 	private int[] heapArray;
 	
@@ -95,7 +95,7 @@ public class MinHeap {
 		
 		heapArray[0] = heapArray[current_heap_size - 1];
 		current_heap_size--;
-		MaxHeapify(0);
+		MinHeapify(0);
 		
 		return root;
 	}
@@ -152,5 +152,28 @@ public class MinHeap {
 		} else {
 			decreaseKey(key, new_val);
 		}
+	}
+	
+}
+
+
+public class MinHeapTest{
+	public static void main(String args[]) {
+		
+		MinHeap h = new MinHeap(11);
+		h.insertKey(3);
+		h.insertKey(2);
+		h.deleteKey(1);
+		h.insertKey(15);
+		h.insertKey(5);
+		h.insertKey(4);
+		h.insertKey(45);
+		
+		System.out.print(h.extractMin() + " ");
+		System.out.print(h.getMin() + " ");
+		
+		h.decreaseKey(2, 1);
+		
+		System.out.print(h.getMin());
 	}
 }
