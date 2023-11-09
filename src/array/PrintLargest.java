@@ -41,4 +41,12 @@ public class PrintLargest {
 	
 	
 	
+	public static void main(String args[]) {
+		int arr[] = { 12, 55, 15, 35, 1 };
+		
+		int n = arr.length;
+		
+		print3Largest(arr, n);
+	}
+	
 }
