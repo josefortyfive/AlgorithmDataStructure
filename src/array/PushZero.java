@@ -27,4 +27,13 @@ public class PushZero {
 	}
 	
 	
+	public static void main(String args[]) {
+		int arr[] = { 1, 9, 4, 55, 0, 0, 2, 0, 8, 0 };
+		
+		pushZerosToEnd(arr);
+		
+		printArray(arr);
+		
+	}
+	
 }
