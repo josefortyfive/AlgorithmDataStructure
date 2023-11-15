@@ -5,6 +5,7 @@
  * @author Edmar
  *
  */
-module Project1 {
+module AlgorithmDataStructure {
 	requires java.desktop;
+	requires java.base;
 }
