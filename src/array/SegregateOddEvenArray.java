@@ -11,14 +11,16 @@ public class SegregateOddEvenArray {
 		while (j != n) {
 			if(arr[j] % 2 == 0) {
 				i++;
+				
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
 			}
-			
-			int temp = arr[i];
-			arr[i] = arr[j];
-			arr[j] = temp;
+
+			j++;
+
 		}
 		
-		j++;
 	}
 	
 	static void printArray(int arr[]) {
@@ -29,4 +31,11 @@ public class SegregateOddEvenArray {
 		}
 	}
 
+	
+	public static void main(String args[]) {
+		int arr[] = {1 ,3, 2, 4, 7, 6, 9, 8};
+		
+		arrayEvenAndOdd(arr);
+		printArray(arr);
+	}
 }
