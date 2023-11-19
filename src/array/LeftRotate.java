@@ -23,6 +23,7 @@ public class LeftRotate {
 		while (start < end) {
 			temp = arr[start];
 			arr[start] = arr[end];
+			arr[end] = temp;
 			start++;
 			end--;
 		}
@@ -35,6 +36,14 @@ public class LeftRotate {
 		}
 	}
 	
+	
+	public static void main(String args[]) {
+		int arr[] = {1, 2, 3, 4, 5, 6, 7};
+		int d = 2;
+		
+		leftRotate(arr, d);
+		printArray(arr);
+	}
 	
 	
 }
