@@ -23,9 +23,15 @@ public class LeftRotate {
 		while (start < end) {
 			temp = arr[start];
 			arr[start] = arr[end];
-			arr[end] = temp;
 			start++;
 			end--;
+		}
+	}
+	
+	
+	static void printArray(int arr[]) {
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+ " ");
 		}
 	}
 	
