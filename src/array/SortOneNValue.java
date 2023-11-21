@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 public class SortOneNValue {
 
 	static void sort(int arr[]) {
@@ -24,4 +26,11 @@ public class SortOneNValue {
 		arr[second] = temp;
 	}
 	
+	public static void main(String args[]) {
+		int arr[] = {3, 2, 5, 6, 1, 4};
+		
+		sort(arr);
+		
+		System.out.print(Arrays.toString(arr));
+	}
 }
