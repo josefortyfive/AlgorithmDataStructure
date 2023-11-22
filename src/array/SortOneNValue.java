@@ -11,7 +11,7 @@ public class SortOneNValue {
 			int correct = arr[i] - 1;
 			
 			if(arr[correct] != arr[i]) {
-				swap(arr, i, correct);
+				swap(arr, i, correct); 
 			}
 			
 			else {
