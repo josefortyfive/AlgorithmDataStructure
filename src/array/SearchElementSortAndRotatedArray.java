@@ -60,5 +60,17 @@ public class SearchElementSortAndRotatedArray {
             return binarySearch(arr, (mid + 1), high, key);
         return binarySearch(arr, low, (mid - 1), key);
     }
+    
+    // main function
+    public static void main(String args[])
+    {
+        // Let us search 3 in below array
+        int arr1[] = { 5, 6, 7, 8, 9, 10, 1, 2, 3 };
+        int n = arr1.length;
+        int key = 3;
+        System.out.println(
+            "Index of the element is : "
+            + pivotedBinarySearch(arr1, n, key));
+    }
 	 
 }
