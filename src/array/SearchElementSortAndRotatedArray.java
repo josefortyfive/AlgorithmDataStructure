@@ -6,9 +6,7 @@ public class SearchElementSortAndRotatedArray {
     /* Searches an element key in a
     pivoted sorted array arrp[]
     of size n */
-	 static int pivotedBinarySearch(int arr[], int n,
-	                                int key)
-	 {
+	 static int pivotedBinarySearch(int arr[], int n, int key){
 	     int pivot = findPivot(arr, 0, n - 1);
 	
 	     // If we didn't find a pivot, then
